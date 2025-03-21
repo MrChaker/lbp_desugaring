@@ -9,7 +9,7 @@ import infrastructure.{
 import vxml_parser.{type VXML, BlamedAttribute, V}
 
 fn blame_us(note: String) -> Blame {
-  Blame("generate_ti2_toc:" <> note, -1, [])
+  Blame("generate_ti2_toc:" <> note, -1, -1, [])
 }
 
 fn prepand_0(number: String) {

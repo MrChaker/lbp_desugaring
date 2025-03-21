@@ -817,7 +817,7 @@ pub fn get_blame(vxml: VXML) -> Blame {
   }
 }
 
-pub const no_blame = Blame("", -1, [])
+pub const no_blame = Blame("", -1, -1, [])
 
 pub fn assert_get_first_blame(vxmls: List(VXML)) -> Blame {
   let assert [first, ..] = vxmls
@@ -825,8 +825,8 @@ pub fn assert_get_first_blame(vxmls: List(VXML)) -> Blame {
 }
 
 pub fn append_blame_comment(blame: Blame, comment: String) -> Blame {
-  let Blame(filename, indent, comments) = blame
-  Blame(filename, indent, [comment, ..comments])
+  let Blame(filename, line_no, char_no, comments) = blame
+  Blame(filename, line_no, char_no, [comment, ..comments])
 }
 
 //**************************************************************
