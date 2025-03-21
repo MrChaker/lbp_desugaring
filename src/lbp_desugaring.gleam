@@ -54,7 +54,6 @@ fn test_renderer() {
       ),
       pipeline: test_pipeline(),
       splitter: vr.empty_splitter(_, ".tsx"),
-      // emitter: vr.stub_html_emitter,
       emitter: vr.stub_jsx_emitter,
       prettifier: vr.guarded_prettier_prettifier(amendments.user_args),
     )
